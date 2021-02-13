@@ -1,0 +1,16 @@
+{
+  "labels": ["dependencies"],
+  "timezone": "Asia/Tokyo",
+  "dependencyDashboard": true,
+  "dependencyDashboardAutoclose": true,
+  "packageRules": [
+    {
+      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
+      "automerge": true
+    },
+    {
+      "matchUpdateTypes": ["major"],
+      "addLabels": ["major dependencies"]
+    }
+  ]
+}
