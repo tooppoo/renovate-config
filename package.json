@@ -1,0 +1,10 @@
+{
+  "name": "@philomagi/renovate-config",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "philomagi <tooppoo56@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "renovate": "^24.49.7"
+  }
+}
