@@ -8,6 +8,6 @@
     "test": "RENOVATE_CONFIG_FILE=default.json renovate-config-validator"
   },
   "devDependencies": {
-    "renovate": "37.381.8"
+    "renovate": "37.381.10"
   }
 }
