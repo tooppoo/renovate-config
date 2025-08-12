@@ -1,17 +1,34 @@
 {
-  "extends": ["config:best-practices"],
-  "labels": ["dependencies"],
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "timezone": "Asia/Tokyo",
   "dependencyDashboard": true,
-  "dependencyDashboardAutoclose": true,
+  "dependencyDashboardApproval": true,
+  "prHourlyLimit": 2,
+  "prConcurrentLimit": 5,
+  "minimumReleaseAge": "3 days",
+  "automerge": true,
+  "automergeType": "pr",
   "packageRules": [
     {
-      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
-      "automerge": true
+      "matchUpdateTypes": ["major"],
+      "automerge": false,
+      "dependencyDashboardApproval": true
     },
     {
-      "matchUpdateTypes": ["major"],
-      "addLabels": ["major dependencies"]
+      "matchManagers": ["github-actions"],
+      "groupName": "github-actions"
+    },
+    {
+      "matchPackagePatterns": ["^@types/"],
+      "groupName": "types"
+    },
+    {
+      "matchPackagePatterns": ["^eslint", "eslint-"],
+      "groupName": "eslint-family"
     }
-  ]
+  ],
+  "lockFileMaintenance": {
+    "enabled": true,
+    "schedule": ["before 03:00 on sunday"]
+  }
 }
