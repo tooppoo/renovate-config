@@ -3,6 +3,7 @@
   "labels": ["dependencies"],
   "timezone": "Asia/Tokyo",
   "dependencyDashboard": true,
+  "dependencyDashboardAutoclose": true,
   "dependencyDashboardApproval": true,
   "prHourlyLimit": 2,
   "prConcurrentLimit": 5,
