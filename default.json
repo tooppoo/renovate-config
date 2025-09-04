@@ -32,5 +32,6 @@
   "lockFileMaintenance": {
     "enabled": true,
     "schedule": ["before 03:00 on sunday"]
-  }
+  },
+  "rebaseWhen": "never"
 }
