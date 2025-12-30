@@ -8,13 +8,21 @@
   "prHourlyLimit": 2,
   "prConcurrentLimit": 5,
   "minimumReleaseAge": "3 days",
-  "automerge": true,
+  "automerge": false,
   "automergeType": "pr",
   "packageRules": [
     {
       "matchUpdateTypes": ["major"],
       "automerge": false,
       "dependencyDashboardApproval": true
+    },
+    {
+      "matchUpdateTypes": ["minor"],
+      "automerge": false
+    },
+    {
+      "matchUpdateTypes": ["patch"],
+      "automerge": true
     },
     {
       "matchManagers": ["github-actions"],
